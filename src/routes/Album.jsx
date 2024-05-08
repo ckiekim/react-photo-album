@@ -44,7 +44,7 @@ const Album = () => {
           <li>
             Images are transformed using the following actions:{' '}
             <code className="bg-black text-gray-100 px-2 py-1 rounded-md text-sm whitespace-normal overflow-auto break-words">
-              .resize(thumbnail().width(300).height(300).gravity(autoGravity())).delivery(format(&apos;auto&apos;)).delivery(quality(&apos;auto&apos;));
+              .resize(thumbnail().width(500).height(500).gravity(autoGravity())).delivery(format(&apos;auto&apos;)).delivery(quality(&apos;auto&apos;));
             </code>
             .
           </li>
@@ -55,7 +55,7 @@ const Album = () => {
         <div className="flex flex-wrap -mx-4">
           {photos.resources.map((photo, idx) => {
             return (
-              <div className="lg:w-1/3 md:w-1/2 w-full p-4" key={idx}>
+              <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full p-4" key={idx}>
                 <CldImage publicId={photo.public_id} />
               </div>
             );

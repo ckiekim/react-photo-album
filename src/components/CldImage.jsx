@@ -13,7 +13,7 @@ const cld = new Cloudinary({
 const CldImage = ({ publicId }) => {
   const myImage = cld
     .image(publicId)
-    .resize(thumbnail().width(300).height(300).gravity(autoGravity()))
+    .resize(thumbnail().width(500).height(500).gravity(autoGravity()))
     .delivery(format('auto'))
     .delivery(quality('auto'));
   return (
